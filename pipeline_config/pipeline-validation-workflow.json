@@ -20,7 +20,7 @@
           "labuser13312014_1766769993@vocareum.com"
         ]
       }
-    }      
+    },      
     {
       "task_key": "feature_engineering",
       "depends_on": [{"task_key": "data_cleaning"}],
@@ -77,4 +77,3 @@
     }
   ]
 }
-
