@@ -4,7 +4,7 @@
   "email_notifications": {
     "on_failure": ["labuser13312014_1766769993@vocareum.com"],
     "on_success": ["labuser13312014_1766769993@vocareum.com"]
-  },
+    },
   "tasks": [
     {
       "task_key": "data_cleaning",
@@ -19,22 +19,23 @@
         "on_success": [
           "labuser13312014_1766769993@vocareum.com"
         ]
-    },
+      }
+    }      
     {
       "task_key": "feature_engineering",
       "depends_on": [{"task_key": "data_cleaning"}],
       "notebook_task": {
         "notebook_path": "/Users/labuser13312014_1766769993@vocareum.com/advanced-machine-learning-operations-en_us-1.2.8/M01 - Streamlining MLOps with Databricks/1.2 Lab - Pipeline workflow notebooks/02 - Feature Engineering and Model Training",
-        "source": "WORKSPACE",
-        "base_parameters": {
+        "source": "WORKSPACE"
+        },
+      "existing_cluster_id": "1226-172718-0oa9p2xe",
+      "timeout_seconds": 600,
+      "run_if": "ALL_SUCCESS",
+      "base_parameters": {
         "subsample": "0.9",
         "max_depth": "8",
         "n_estimators": "100"
       }
-      },
-      "existing_cluster_id": "1226-172718-0oa9p2xe",
-      "timeout_seconds": 600,
-      "run_if": "ALL_SUCCESS"
     },
     {
       "task_key": "conditional_execution",
@@ -69,12 +70,11 @@
         "subsample": "0.9",
         "max_depth": "8",
         "n_estimators": "100"
-      }
+        }
       },
       "existing_cluster_id": "1226-172718-0oa9p2xe",
       "timeout_seconds": 600
     }
-  }
   ]
 }
 
